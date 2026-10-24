@@ -1,0 +1,6 @@
+model,opponent,episodes,wins,losses,draws,mean_episode_length,mean_episode_reward,win_rate
+.\models\hier_objective_defense_seed54_final.zip,adaptive,5,0,5,0,1209.8,28.96448865858353,0.0
+.\models\hier_objective_defense_seed54_final.zip,aggressive,5,0,5,0,1584.6,69.63845893074519,0.0
+.\models\hier_objective_defense_seed54_final.zip,balanced,5,0,5,0,1210.4,33.51562135740851,0.0
+.\models\hier_objective_defense_seed54_final.zip,defensive,5,5,0,0,1405.8,56.27427541152463,1.0
+.\models\hier_objective_defense_seed54_final.zip,objective,5,0,5,0,1212.6,36.45900245145889,0.0

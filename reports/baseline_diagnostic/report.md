@@ -1,0 +1,12 @@
+# MOBA-RL analysis report
+
+## Replay summary
+
+| file                                    | opponent   | winner   |   episode_seed |   steps |   event_count |   objective_captures |
+|:----------------------------------------|:-----------|:---------|---------------:|--------:|--------------:|---------------------:|
+| aggressive_episode_0000_seed_11000.json | aggressive | red      |          11000 |    1692 |          1088 |                    0 |
+| balanced_episode_0000_seed_41000.json   | balanced   | red      |          41000 |    1017 |           407 |                    0 |
+| defensive_episode_0000_seed_21000.json  | defensive  | red      |          21000 |    1644 |           832 |                    0 |
+| objective_episode_0000_seed_31000.json  | objective  | red      |          31000 |    1182 |           461 |                    1 |
+
+Action counts are also saved to `replay_action_counts.csv`.

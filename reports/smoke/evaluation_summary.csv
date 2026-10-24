@@ -1,0 +1,5 @@
+model,opponent,episodes,wins,losses,draws,mean_episode_length,mean_episode_reward,win_rate
+.\models\moba_ppo_final.zip,aggressive,20,4,16,0,1656.95,5.219449999999793,0.2
+.\models\moba_ppo_final.zip,balanced,20,0,20,0,1012.0,-8.688000000000034,0.0
+.\models\moba_ppo_final.zip,defensive,20,0,20,0,1627.55,-5.302449999999899,0.0
+.\models\moba_ppo_final.zip,objective,20,0,20,0,1181.35,-7.318650000000074,0.0

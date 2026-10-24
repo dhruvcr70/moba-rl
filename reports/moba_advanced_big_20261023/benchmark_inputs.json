@@ -1,0 +1,138 @@
+[
+  {
+    "file": "benchmark_20261024_fixed_25.csv",
+    "sha256": "1141f996a7a6843414731d2175d1f7c04244dd678d27f0f74e037d869adebf83",
+    "matches": 225,
+    "seed_min": 900000,
+    "seed_max": 900024,
+    "map_conditions": [
+      "fixed"
+    ],
+    "manifest_file": "benchmark_20261024_fixed_25_manifest.json",
+    "manifest_sha256": "d48eda350c28c4eba8b6e1426764ceeef293f93bbdc443993551f86027e6b72a",
+    "manifest": {
+      "schema_version": 1,
+      "created_at": "2026-10-24T20:27:11+05:30",
+      "command": "python -m moba_rl.evaluation.benchmark --episodes 25 --seed 900000 --csv logs/benchmark_20261024_fixed_25.csv --summary logs/benchmark_20261024_fixed_25_summary.json",
+      "parameters": {
+        "model": "models/moba_advanced_big_20261023_final.zip",
+        "opponent_models": [
+          "models/opponent_pool/moba_advanced_big_20261023/opponent_000030000.zip",
+          "models/opponent_pool/moba_advanced_big_20261023/opponent_000050000.zip"
+        ],
+        "episodes": 25,
+        "seed": 900000,
+        "max_decisions": 5000,
+        "ticks_per_decision": 50,
+        "procedural_maps": false,
+        "scripted_only": false,
+        "csv": "logs/benchmark_20261024_fixed_25.csv",
+        "summary": "logs/benchmark_20261024_fixed_25_summary.json"
+      },
+      "candidate": {
+        "path": "models\\moba_advanced_big_20261023_final.zip",
+        "sha256": "15e04fe3abddc56a5e43ab0316dd962deb003ebeeb3d069b7a2e1aa031c8b2b8",
+        "actions": 36,
+        "observation_features": 57
+      },
+      "opponent_checkpoints": [
+        {
+          "path": "models\\opponent_pool\\moba_advanced_big_20261023\\opponent_000030000.zip",
+          "sha256": "5b34a47900567c3b44283dc009c7d38a2ed31acf62df5132b1c840c1d4bb5505"
+        },
+        {
+          "path": "models\\opponent_pool\\moba_advanced_big_20261023\\opponent_000050000.zip",
+          "sha256": "555fff70a331fb5d810e13941ac49592d9fba23a6512252f9405b863ac07cdfc"
+        }
+      ],
+      "source_sha256": {
+        "moba_rl\\evaluation\\benchmark.py": "775c69d83780787271bdad6473e0ba94b1e9f10cdf2ef756923726b58a7ea0ef",
+        "moba_rl\\environment.py": "59f36db654c4729826b996336bd61971be9254a4fedea9ecac2d32a9a2a36f7b",
+        "moba_rl\\agents\\scripted.py": "831337c854488db2b0967db48e1e46a43107132b7deb2864fadbbfc45097f55c"
+      },
+      "runtime": {
+        "python": "3.12.10",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "torch": "2.9.1+cu128",
+        "stable_baselines3": "2.9.0",
+        "sb3_contrib": "2.9.0",
+        "gymnasium": "1.4.0",
+        "numpy": "2.5.3"
+      },
+      "outputs": {
+        "summary": "logs\\benchmark_20261024_fixed_25_summary.json",
+        "summary_sha256": "1ad4d7ee1fa6ea5f10542499da99cec7a0984874424dd3be4dc55649325fd882",
+        "match_csv": "logs\\benchmark_20261024_fixed_25.csv",
+        "match_csv_sha256": "1141f996a7a6843414731d2175d1f7c04244dd678d27f0f74e037d869adebf83"
+      }
+    }
+  },
+  {
+    "file": "benchmark_20261024_procedural_25.csv",
+    "sha256": "2d0d76fdab4b21c94f587f4d050ee1ccfdf957243856a72584db976699af9bb9",
+    "matches": 225,
+    "seed_min": 900000,
+    "seed_max": 900024,
+    "map_conditions": [
+      "procedural"
+    ],
+    "manifest_file": "benchmark_20261024_procedural_25_manifest.json",
+    "manifest_sha256": "bd96b37fb049d25e459b44a18958d5549efe73ebffb13de89d28826dc7138033",
+    "manifest": {
+      "schema_version": 1,
+      "created_at": "2026-10-24T20:31:43+05:30",
+      "command": "python -m moba_rl.evaluation.benchmark --episodes 25 --seed 900000 --procedural-maps --csv logs/benchmark_20261024_procedural_25.csv --summary logs/benchmark_20261024_procedural_25_summary.json",
+      "parameters": {
+        "model": "models/moba_advanced_big_20261023_final.zip",
+        "opponent_models": [
+          "models/opponent_pool/moba_advanced_big_20261023/opponent_000030000.zip",
+          "models/opponent_pool/moba_advanced_big_20261023/opponent_000050000.zip"
+        ],
+        "episodes": 25,
+        "seed": 900000,
+        "max_decisions": 5000,
+        "ticks_per_decision": 50,
+        "procedural_maps": true,
+        "scripted_only": false,
+        "csv": "logs/benchmark_20261024_procedural_25.csv",
+        "summary": "logs/benchmark_20261024_procedural_25_summary.json"
+      },
+      "candidate": {
+        "path": "models\\moba_advanced_big_20261023_final.zip",
+        "sha256": "15e04fe3abddc56a5e43ab0316dd962deb003ebeeb3d069b7a2e1aa031c8b2b8",
+        "actions": 36,
+        "observation_features": 57
+      },
+      "opponent_checkpoints": [
+        {
+          "path": "models\\opponent_pool\\moba_advanced_big_20261023\\opponent_000030000.zip",
+          "sha256": "5b34a47900567c3b44283dc009c7d38a2ed31acf62df5132b1c840c1d4bb5505"
+        },
+        {
+          "path": "models\\opponent_pool\\moba_advanced_big_20261023\\opponent_000050000.zip",
+          "sha256": "555fff70a331fb5d810e13941ac49592d9fba23a6512252f9405b863ac07cdfc"
+        }
+      ],
+      "source_sha256": {
+        "moba_rl\\evaluation\\benchmark.py": "7704fdc70b5dc7507234bd10102c2214002a2447e5b9abc90734238d63ddf1fc",
+        "moba_rl\\environment.py": "59f36db654c4729826b996336bd61971be9254a4fedea9ecac2d32a9a2a36f7b",
+        "moba_rl\\agents\\scripted.py": "831337c854488db2b0967db48e1e46a43107132b7deb2864fadbbfc45097f55c"
+      },
+      "runtime": {
+        "python": "3.12.10",
+        "platform": "Windows-11-10.0.26200-SP0",
+        "torch": "2.9.1+cu128",
+        "stable_baselines3": "2.9.0",
+        "sb3_contrib": "2.9.0",
+        "gymnasium": "1.4.0",
+        "numpy": "2.5.3"
+      },
+      "outputs": {
+        "summary": "logs\\benchmark_20261024_procedural_25_summary.json",
+        "summary_sha256": "edb26e7bec0724e7581e8a203220b7677a669371f6a0dcabf4a8a4f2f64d775c",
+        "match_csv": "logs\\benchmark_20261024_procedural_25.csv",
+        "match_csv_sha256": "2d0d76fdab4b21c94f587f4d050ee1ccfdf957243856a72584db976699af9bb9"
+      }
+    }
+  }
+]

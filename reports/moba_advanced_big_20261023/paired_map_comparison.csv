@@ -1,0 +1,10 @@
+opponent,candidate_side,matched_seeds,fixed_map_win_score,procedural_map_win_score,fixed_minus_procedural
+adaptive,blue,25,1.0,1.0,0.0
+aggressive,blue,25,1.0,0.96,0.04
+balanced,blue,25,0.08,0.8,-0.72
+defensive,blue,25,0.04,0.52,-0.48
+models/opponent_pool/moba_advanced_big_20261023/opponent_000030000.zip,blue,25,1.0,1.0,0.0
+models/opponent_pool/moba_advanced_big_20261023/opponent_000030000.zip,red,25,1.0,1.0,0.0
+models/opponent_pool/moba_advanced_big_20261023/opponent_000050000.zip,blue,25,0.4,0.56,-0.16
+models/opponent_pool/moba_advanced_big_20261023/opponent_000050000.zip,red,25,0.88,0.92,-0.04
+objective,blue,25,1.0,1.0,0.0

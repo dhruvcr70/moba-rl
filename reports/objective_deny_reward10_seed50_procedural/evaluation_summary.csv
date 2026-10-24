@@ -1,0 +1,6 @@
+model,opponent,episodes,wins,losses,draws,mean_episode_length,mean_episode_reward,win_rate
+.\models\objective_deny_reward10_seed50_final.zip,adaptive,5,0,5,0,1241.4,-12.901999087765937,0.0
+.\models\objective_deny_reward10_seed50_final.zip,aggressive,5,5,0,0,1557.2,59.783974285235125,1.0
+.\models\objective_deny_reward10_seed50_final.zip,balanced,5,0,5,0,1083.2,0.3084023125845999,0.0
+.\models\objective_deny_reward10_seed50_final.zip,defensive,5,2,3,0,1684.6,8.326635585111962,0.4
+.\models\objective_deny_reward10_seed50_final.zip,objective,5,0,5,0,1228.2,-12.878449590128644,0.0

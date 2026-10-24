@@ -1,0 +1,45 @@
+# MOBA-RL analysis report
+
+## Evaluation summary
+
+| model                                                                              | opponent   |   episodes |   wins |   losses |   draws |   mean_episode_length |   mean_episode_reward |   win_rate |
+|:-----------------------------------------------------------------------------------|:-----------|-----------:|-------:|---------:|--------:|----------------------:|----------------------:|-----------:|
+| .\models\hier_selfplay_combat_seed52_final.zip | adaptive   |          5 |      5 |        0 |       0 |                1392   |              107.788  |        1   |
+| .\models\hier_selfplay_combat_seed52_final.zip | aggressive |          5 |      5 |        0 |       0 |                1451   |              112.953  |        1   |
+| .\models\hier_selfplay_combat_seed52_final.zip | balanced   |          5 |      2 |        3 |       0 |                1450.4 |              110.188  |        0.4 |
+| .\models\hier_selfplay_combat_seed52_final.zip | defensive  |          5 |      5 |        0 |       0 |                1281   |               85.7904 |        1   |
+| .\models\hier_selfplay_combat_seed52_final.zip | objective  |          5 |      5 |        0 |       0 |                1323.8 |              115.253  |        1   |
+
+![Win rates by opponent](win_rates.png)
+
+## Replay summary
+
+| file                                     | opponent   | winner   |   episode_seed |   steps |   event_count |   objective_captures |   blue_objective_captures |   red_objective_captures |
+|:-----------------------------------------|:-----------|:---------|---------------:|--------:|--------------:|---------------------:|--------------------------:|-------------------------:|
+| adaptive_episode_0000_seed_160000.json   | adaptive   | blue     |         160000 |    1416 |           860 |                    1 |                         0 |                        1 |
+| adaptive_episode_0001_seed_160001.json   | adaptive   | blue     |         160001 |    1454 |           913 |                    1 |                         1 |                        0 |
+| adaptive_episode_0002_seed_160002.json   | adaptive   | blue     |         160002 |    1317 |           794 |                    1 |                         0 |                        1 |
+| adaptive_episode_0003_seed_160003.json   | adaptive   | blue     |         160003 |    1332 |           831 |                    1 |                         0 |                        1 |
+| adaptive_episode_0004_seed_160004.json   | adaptive   | blue     |         160004 |    1441 |           931 |                    1 |                         0 |                        1 |
+| aggressive_episode_0000_seed_120000.json | aggressive | blue     |         120000 |    1516 |          1053 |                    1 |                         1 |                        0 |
+| aggressive_episode_0001_seed_120001.json | aggressive | blue     |         120001 |    1332 |           836 |                    0 |                         0 |                        0 |
+| aggressive_episode_0002_seed_120002.json | aggressive | blue     |         120002 |    1583 |          1118 |                    0 |                         0 |                        0 |
+| aggressive_episode_0003_seed_120003.json | aggressive | blue     |         120003 |    1451 |           978 |                    1 |                         1 |                        0 |
+| aggressive_episode_0004_seed_120004.json | aggressive | blue     |         120004 |    1373 |           874 |                    0 |                         0 |                        0 |
+| balanced_episode_0000_seed_150000.json   | balanced   | blue     |         150000 |    1360 |          1055 |                    0 |                         0 |                        0 |
+| balanced_episode_0001_seed_150001.json   | balanced   | red      |         150001 |    1521 |          1131 |                    1 |                         1 |                        0 |
+| balanced_episode_0002_seed_150002.json   | balanced   | blue     |         150002 |    1365 |          1055 |                    1 |                         1 |                        0 |
+| balanced_episode_0003_seed_150003.json   | balanced   | red      |         150003 |    1531 |          1200 |                    0 |                         0 |                        0 |
+| balanced_episode_0004_seed_150004.json   | balanced   | red      |         150004 |    1475 |          1055 |                    1 |                         1 |                        0 |
+| defensive_episode_0000_seed_130000.json  | defensive  | blue     |         130000 |    1264 |           768 |                    0 |                         0 |                        0 |
+| defensive_episode_0001_seed_130001.json  | defensive  | blue     |         130001 |    1280 |           764 |                    0 |                         0 |                        0 |
+| defensive_episode_0002_seed_130002.json  | defensive  | blue     |         130002 |    1279 |           735 |                    0 |                         0 |                        0 |
+| defensive_episode_0003_seed_130003.json  | defensive  | blue     |         130003 |    1297 |           775 |                    0 |                         0 |                        0 |
+| defensive_episode_0004_seed_130004.json  | defensive  | blue     |         130004 |    1285 |           739 |                    0 |                         0 |                        0 |
+| objective_episode_0000_seed_140000.json  | objective  | blue     |         140000 |    1251 |           778 |                    1 |                         1 |                        0 |
+| objective_episode_0001_seed_140001.json  | objective  | blue     |         140001 |    1378 |           910 |                    1 |                         1 |                        0 |
+| objective_episode_0002_seed_140002.json  | objective  | blue     |         140002 |    1358 |           895 |                    1 |                         1 |                        0 |
+| objective_episode_0003_seed_140003.json  | objective  | blue     |         140003 |    1377 |           872 |                    1 |                         0 |                        1 |
+| objective_episode_0004_seed_140004.json  | objective  | blue     |         140004 |    1255 |           757 |                    1 |                         1 |                        0 |
+
+Action counts are also saved to `replay_action_counts.csv`.

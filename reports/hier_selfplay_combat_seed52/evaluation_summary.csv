@@ -1,0 +1,6 @@
+model,opponent,episodes,wins,losses,draws,mean_episode_length,mean_episode_reward,win_rate
+.\models\hier_selfplay_combat_seed52_final.zip,adaptive,5,5,0,0,1392.0,107.78818166589484,1.0
+.\models\hier_selfplay_combat_seed52_final.zip,aggressive,5,5,0,0,1451.0,112.95344092472006,1.0
+.\models\hier_selfplay_combat_seed52_final.zip,balanced,5,2,3,0,1450.4,110.18765803626302,0.4
+.\models\hier_selfplay_combat_seed52_final.zip,defensive,5,5,0,0,1281.0,85.7903915516132,1.0
+.\models\hier_selfplay_combat_seed52_final.zip,objective,5,5,0,0,1323.8,115.2526344927865,1.0

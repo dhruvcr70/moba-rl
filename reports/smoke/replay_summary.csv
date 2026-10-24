@@ -1,0 +1,5 @@
+file,opponent,winner,episode_seed,steps,event_count,objective_captures
+aggressive_episode_0000_seed_7000.json,aggressive,red,7000,1461,736,0
+balanced_episode_0000_seed_37000.json,balanced,red,37000,1156,533,0
+defensive_episode_0000_seed_17000.json,defensive,red,17000,1714,884,0
+objective_episode_0000_seed_27000.json,objective,red,27000,1199,554,1

@@ -1,0 +1,6 @@
+model,opponent,episodes,wins,losses,draws,mean_episode_length,mean_episode_reward,win_rate
+.\models\strategic_heldout_cuda50k_final.zip,adaptive,5,0,5,0,1285.0,-6.1950000000000855,0.0
+.\models\strategic_heldout_cuda50k_final.zip,aggressive,5,5,0,0,1626.4,16.564400000000113,1.0
+.\models\strategic_heldout_cuda50k_final.zip,balanced,5,0,5,0,1199.2,-6.46080000000007,0.0
+.\models\strategic_heldout_cuda50k_final.zip,defensive,5,0,5,0,1643.4,-4.836599999999889,0.0
+.\models\strategic_heldout_cuda50k_final.zip,objective,5,0,5,0,1271.6,-6.328800000000082,0.0

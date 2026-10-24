@@ -1,0 +1,6 @@
+model,opponent,episodes,wins,losses,draws,mean_episode_length,mean_episode_reward,win_rate
+.\models\strategic_shaped_isolation_50k_final.zip,adaptive,5,0,5,0,1242.0,4.317109141747421,0.0
+.\models\strategic_shaped_isolation_50k_final.zip,aggressive,5,5,0,0,1509.4,71.68037999568443,1.0
+.\models\strategic_shaped_isolation_50k_final.zip,balanced,5,0,5,0,1124.0,2.4541091417473644,0.0
+.\models\strategic_shaped_isolation_50k_final.zip,defensive,5,5,0,0,1549.6,31.4447091417478,1.0
+.\models\strategic_shaped_isolation_50k_final.zip,objective,5,0,5,0,1244.0,3.319109141747417,0.0
