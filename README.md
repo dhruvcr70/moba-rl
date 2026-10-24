@@ -99,7 +99,7 @@ python -m moba_rl.evaluation.evaluate `
   --csv logs\latest_evaluation.csv
 ```
 
-Evaluation output includes wins, objective captures, towers destroyed, champion kills/deaths, final gold and levels, ward and wave-plan usage, action diversity, and advanced-action rate. Create a report and charts with:
+Evaluation output includes wins, objective captures, towers destroyed, champion kills/deaths, final gold and levels, ward and wave-plan usage, action diversity, and advanced-action rate.
 
 For match-level evidence, run the paired benchmark. It evaluates all five scripted baselines and can also compare optional self-play checkpoints using the same held-out seeds for both policy seats. Checkpoints are not bundled in this repository; use `--scripted-only` unless you provide compatible policies. It writes every game to a CSV and a summary with Wilson 95% confidence intervals. `--episodes 50` is the default; a quick smoke run can use fewer games.
 
@@ -112,18 +112,22 @@ python -m moba_rl.evaluation.benchmark `
   --scripted-only
 ```
 
-The benchmark outputs a per-match CSV, summary JSON, and reproducibility manifest under `logs/`. The manifest records the full command, seed/map settings, Python and library versions, and SHA-256 hashes of the candidate, opponent checkpoints, core benchmark/environment source files, and output files. Pass `--csv` and `--summary` to choose output locations, or `--scripted-only` to omit historical policy seat swaps.
+The benchmark outputs a per-match CSV, summary JSON, and reproducibility manifest under `logs/`. The manifest records the full command, seed/map settings, Python and library versions, and SHA-256 hashes of the candidate policy, benchmark/environment source files, and output files. Pass `--csv` and `--summary` to choose output locations, or `--scripted-only` to omit historical policy seat swaps.
 
 To compare the fixed map with procedural maps using the same held-out seed range, run two benchmark jobs with separate output names. Use `--episodes 50` for a larger comparison; the committed report uses 25 matches per opponent and map condition, paired by seed.
 
 ```powershell
 python -m moba_rl.evaluation.benchmark `
+  --model path\to\your_policy.zip `
+  --scripted-only `
   --episodes 50 `
   --seed 900000 `
   --csv logs\benchmark_fixed.csv `
   --summary logs\benchmark_fixed_summary.json
 
 python -m moba_rl.evaluation.benchmark `
+  --model path\to\your_policy.zip `
+  --scripted-only `
   --episodes 50 `
   --seed 900000 `
   --procedural-maps `
@@ -131,18 +135,17 @@ python -m moba_rl.evaluation.benchmark `
   --summary logs\benchmark_procedural_summary.json
 ```
 
-Build a report from both map conditions and the training-time evaluation log:
+Build a report from both map conditions. Add `--training-csv` or `--evaluations` when you have those local files:
 
 ```powershell
 python -m moba_rl.analysis.report `
   --benchmarks logs\benchmark_fixed.csv logs\benchmark_procedural.csv `
-  --training-csv logs\moba_advanced_big_20261023_multi_opponent_evaluation.csv `
   --out-dir reports\moba_advanced_big_20261023
 ```
 
-The checked-in run report is in `reports/moba_advanced_big_20261023/`; start with `RESULTS.md` for the main findings. Its 25-seed paired map comparison includes `adaptive`, a held-out scripted opponent not listed in the training opponent pool. The candidate won 8% of fixed-map matches against the balanced baseline and 4% against the defensive baseline, versus 80% and 52% respectively on procedural maps. It captured the neutral objective in 0 of 450 matches. These results expose map sensitivity and a strategic-objective weakness despite stronger aggregate wins against other opponents; they are the main targets for the next policy improvement cycle.
+The checked-in reports summarize historical runs in `reports/moba_advanced_big_20261023/`; start with `RESULTS.md` for the main findings. Model archives and raw per-match logs from those runs are not included in this public release. Its 25-seed paired map comparison includes `adaptive`, a held-out scripted opponent not listed in the training opponent pool. The candidate won 8% of fixed-map matches against the balanced baseline and 4% against the defensive baseline, versus 80% and 52% respectively on procedural maps. It captured the neutral objective in 0 of 450 matches. These results expose map sensitivity and a strategic-objective weakness despite stronger aggregate wins against other opponents; they are the main targets for the next policy improvement cycle.
 
-A follow-up fixed-map check on 50 new seeds (910000–910049) confirmed the matchup weakness: the same checkpoint won 7/50 (14%) against `balanced` and 0/50 against `defensive`. Full per-match data and a hash manifest are in `logs/benchmark_fixed_followup_50*`. `train_ppo.py` supports `--mixed-maps` and `--opponent-weights` for follow-up runs. For example:
+A follow-up fixed-map check on 50 new seeds (910000–910049) confirmed the matchup weakness: the same checkpoint won 7/50 (14%) against `balanced` and 0/50 against `defensive`. The original run wrote per-match data and a hash manifest under `logs/`; generated raw logs are excluded from this public release. `train_ppo.py` supports `--mixed-maps` and `--opponent-weights` for follow-up runs. For example:
 
 ```powershell
 python -m moba_rl.training.train_ppo `
